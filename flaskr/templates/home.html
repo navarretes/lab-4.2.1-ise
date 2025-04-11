@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+
+{% block page_name %}
+Wiki Index
+{% endblock %}
+
+{% block breadcrumb %}
+<li class="is-active"><a href="#" aria-current="page">Home</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h1 class="title is-2">Welcome to the Cats on Skis Wiki</h1>
+    </div>
+    <div class="card-content">
+        <p class="is-size-5">Your comprehensive resource for all things related to cats on skis.</p>
+        <div class="buttons is-flex is-flex-wrap-wrap">
+            <a href="{{ url_for('all_pages') }}" class="button is-primary">Browse Pages</a>
+            <a href="{{ url_for('about') }}" class="button is-secondary">About Us</a>
+        </div>
+    </div>
+</div>
+{% endblock %} 

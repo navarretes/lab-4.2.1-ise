@@ -4,19 +4,40 @@
 About Cats on Skis
 {% endblock %}
 
+{% block breadcrumb %}
+<li class="is-active"><a href="#" aria-current="page">About</a></li>
+{% endblock %}
+
 {% block content %}
-<h3>About Cats on Skis</h3>
+<div class="card">
+    <div class="card-header">
+        <h2 class="title is-3">About Cats on Skis</h2>
+    </div>
+    <div class="card-content">
+        <p class="is-size-5">
+            We love Cats on Skis! This is the absolute best place to find information about cats on skis.
+        </p>
+    </div>
+</div>
 
-<p>
-We love Cats on Skis! This is the absolute best place to find information about cats on skis.
-</p>
-
-<h3>Your Authors</h3>
-
-<p>
-Slalom Sammy 
-<img src="{{ url_for('images', image='slalom-sammy') }}">
-</p>
-
+<div class="card mt-4">
+    <div class="card-header">
+        <h2 class="title is-3">Your Authors</h2>
+    </div>
+    <div class="card-content">
+        <div class="columns is-multiline">
+            <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="title is-4">Slalom Sammy</h3>
+                        <figure class="image">
+                            <img src="{{ url_for('images', image='slalom-sammy') }}" alt="Slalom Sammy">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 

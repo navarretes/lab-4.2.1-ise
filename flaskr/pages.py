@@ -23,9 +23,7 @@ def make_endpoints(app, backend):
     @app.route("/")
     def home():
         """Returns the home page."""
-        return render_template("main.html",
-                               page_name="Wiki Index",
-                               page_content="Welcome to the Wiki!")
+        return render_template("home.html")
 
     @app.route("/about")
     def about():
@@ -47,6 +45,6 @@ def make_endpoints(app, backend):
     @app.route("/pages/<name>")
     def pages(name):
         """Returns the page from backend.get_wiki_page"""
-        return render_template("main.html",
+        return render_template("page.html",
                                page_name=name,
                                page_content=backend.get_wiki_page(name))
